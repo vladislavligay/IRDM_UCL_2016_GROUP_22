@@ -5,7 +5,7 @@
 library("sqldf", lib.loc="~/R/win-library/3.2")
 
 #read all load data
-#load = read.csv("C:/Users/hp-pc/Documents/IRDM/Load_history.csv")
+load = read.csv("C:/Users/hp-pc/Documents/IRDM/Load_history.csv")
 
 #filter for zone 1
 load_z1 = sqldf("select * from load where zone_id = 1")
@@ -38,7 +38,7 @@ colnames(load_z1_hourly) <- col_headings
 
 
 #read all validation data
-#val = read.csv("C:/Users/hp-pc/Documents/IRDM/Benchmark.csv")
+val = read.csv("C:/Users/hp-pc/Documents/IRDM/Benchmark.csv")
 
 #filter for zone 1 and current week (march2015)
 val_z1 = sqldf("select * from val where zone_id = 1 and year = 2005 and month = 3")       ############
